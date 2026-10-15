@@ -1,0 +1,70 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student Management</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Student Management</h1>
+
+        <p id="message" role="status"></p>
+
+        <form id="studentForm">
+            <label for="rollNumber">Roll Number</label>
+            <input id="rollNumber" name="rollNumber"
+                   required maxlength="30">
+
+            <label for="fullName">Full Name</label>
+            <input id="fullName" name="fullName"
+                   required maxlength="100">
+
+            <label for="email">Email</label>
+            <input id="email" name="email"
+                   type="email" maxlength="150">
+
+            <label for="className">Class</label>
+            <input id="className" name="className"
+                   required maxlength="50">
+
+            <button type="submit">Add Student</button>
+        </form>
+
+        
+        <h2>Student Records</h2>
+
+        <label for="searchInput">Search by name, roll number, or class</label>
+        <input id="searchInput" type="search"
+               placeholder="Enter search text">
+
+        <button type="button" id="refreshButton">Refresh Students</button>
+
+        <div class="table-wrapper">
+            <table>
+               <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>Roll Number</th>
+                    <th>Name</th>
+                    <th>Email</th>
+                    <th>Class</th>
+                    <th>Actions</th>
+                </tr>
+               </thead>
+               <tbody id="studentTableBody"></tbody>
+            </table>
+        </div>
+        <div class="page-navigation">
+           <a href="dashboard.html" class="back-button">
+               ← Back to Admin Dashboard
+           </a>
+        </div>
+        
+    </div>
+
+    <script src="js/students.js"></script>
+</body>
+</html>

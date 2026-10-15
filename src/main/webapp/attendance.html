@@ -1,0 +1,38 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Mark Attendance</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Daily Attendance</h1>
+    <p id="message" role="status"></p>
+
+    <label for="subjectId">Subject</label>
+    <select id="subjectId" required></select>
+
+    <label for="attendanceDate">Date</label>
+    <input id="attendanceDate" type="date" required>
+
+    <button type="button" id="loadButton">Load Students</button>
+
+    <table>
+        <thead>
+        <tr><th>Roll No.</th><th>Name</th><th>Status</th><th>Remarks</th><th>Save</th></tr>
+        </thead>
+        <tbody id="attendanceRows"></tbody>
+    </table>
+    <div class="page-navigation">
+       <a href="dashboard.html" class="back-button">
+           ← Back to Admin Dashboard
+       </a>
+    </div>
+    
+</div>
+<script src="js/attendance.js"></script>
+</body>
+</html>

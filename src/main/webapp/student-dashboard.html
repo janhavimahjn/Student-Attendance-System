@@ -1,0 +1,100 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>My Attendance | Student Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<main class="container">
+    <header>
+        <p>STUDENT PORTAL</p>
+        <h1>My Dashboard</h1>
+        <p id="welcome">Loading your profile...</p>
+    </header>
+
+    <nav class="dashboard-links">
+        <a href="#overview">Overview</a>
+        <a href="#reports">Monthly Reports</a>
+        <a href="#history">Attendance History</a>
+        <button id="logoutButton" type="button">Sign Out</button>
+    </nav>
+
+    <section id="overview">
+        <h2>Attendance Overview</h2>
+
+        <div class="dashboard-grid">
+            <article class="stat-card">
+                <p>Overall Attendance</p>
+                <strong id="overallPercentage">—</strong>
+                <div class="progress">
+                    <div id="overallProgress" style="width:0%"></div>
+                </div>
+            </article>
+
+            <article class="stat-card">
+                <p>Present</p>
+                <strong id="presentCount">0</strong>
+            </article>
+
+            <article class="stat-card">
+                <p>Absent</p>
+                <strong id="absentCount">0</strong>
+            </article>
+        </div>
+
+        <p id="profileDetails"></p>
+    </section>
+
+    <section id="reports">
+        <h2>Monthly Attendance Report</h2>
+
+        <label for="reportMonth">Select month</label>
+        <input id="reportMonth" type="month" required>
+
+        <button id="loadReportButton" type="button">View Report</button>
+        <p id="reportMessage" role="status"></p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Subject</th>
+                    <th>Present</th>
+                    <th>Absent</th>
+                    <th>Late</th>
+                    <th>Total</th>
+                    <th>Attendance %</th>
+                </tr>
+                </thead>
+                <tbody id="reportRows"></tbody>
+            </table>
+        </div>
+    </section>
+
+    <section id="history">
+        <h2>Attendance History</h2>
+        <p>Your previously recorded attendance, newest first.</p>
+
+        <div class="table-wrapper">
+            <table>
+                <thead>
+                <tr>
+                    <th>Date</th>
+                    <th>Subject</th>
+                    <th>Status</th>
+                    <th>Remarks</th>
+                </tr>
+                </thead>
+                <tbody id="historyRows"></tbody>
+            </table>
+        </div>
+        <p id="historyMessage" role="status"></p>
+    </section>
+</main>
+
+<script src="js/student-dashboard.js"></script>
+</body>
+</html>

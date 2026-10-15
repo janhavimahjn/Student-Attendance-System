@@ -1,0 +1,126 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>AttendEase | Student Attendance Portal</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .landing { max-width: 1200px; margin: auto; padding: 24px; }
+        .topbar {
+            display:flex; align-items:center; justify-content:space-between;
+            gap:16px; padding:16px 0; flex-wrap:wrap;
+        }
+        .brand { font-size:1.4rem; font-weight:800; color:#4f46e5; }
+        .hero {
+            margin-top:24px; padding:65px 42px; border-radius:24px;
+            background:linear-gradient(120deg,#eef2ff,#f5f3ff 60%,#fff);
+            border:1px solid #e0e7ff;
+        }
+        .eyebrow {
+            color:#4f46e5; font-weight:800; letter-spacing:2px;
+            font-size:.78rem; text-transform:uppercase;
+        }
+        .hero h1 { max-width:760px; font-size:clamp(2.3rem,5vw,4rem); margin:14px 0; }
+        .hero p { max-width:620px; font-size:1.1rem; }
+        .actions { display:flex; flex-wrap:wrap; gap:12px; margin-top:26px; }
+        .actions a {
+            display:inline-block; padding:13px 20px; border-radius:10px;
+            font-weight:700; background:#4f46e5; color:white;
+        }
+        .actions a.secondary { background:white; color:#4f46e5; border:1px solid #c7d2fe; }
+        .section-title { margin:42px 0 18px; }
+        .portal-grid { display:grid; grid-template-columns:repeat(2,minmax(0,1fr)); gap:20px; }
+        .portal-card { background:white; border:1px solid #e4e7ec; border-radius:18px; padding:26px; }
+        .portal-icon {
+            width:50px;height:50px;display:grid;place-items:center;
+            background:#eef2ff;border-radius:14px;font-size:24px;
+        }
+        .portal-card h3 { margin-bottom:8px; }
+        .portal-card p { min-height:48px; }
+        .portal-card a { display:inline-block; margin-top:12px; font-weight:700; }
+        .features { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:18px; }
+        .feature { padding:22px; background:white; border:1px solid #e4e7ec; border-radius:14px; }
+        footer { text-align:center; padding:28px 0; color:#667085; }
+        @media(max-width:700px) {
+            .landing { padding:14px; }
+            .hero { padding:35px 22px; }
+            .portal-grid,.features { grid-template-columns:1fr; }
+            .portal-card p { min-height:0; }
+        }
+    </style>
+</head>
+<body>
+<div class="landing">
+
+    <header class="topbar">
+        <a class="brand" href="index.html">✦ AttendEase</a>
+        <span>Student Attendance Management System</span>
+    </header>
+
+    <main>
+        <section class="hero">
+            <div class="eyebrow">Simple · Smart · Organized</div>
+            <h1>Attendance management, made effortless.</h1>
+            <p>
+                A smarter way to manage student attendance, track academic
+                participation, and view attendance reports in one place.
+            </p>
+            <div class="actions">
+                <a href="student-login.html">Student Portal →</a>
+                <a href="login.html" class="secondary">Admin Portal →</a>
+            </div>
+        </section>
+
+        <h2 class="section-title">Choose your portal</h2>
+
+        <section class="portal-grid">
+            <article class="portal-card">
+                <div class="portal-icon">🎓</div>
+                <h3>Student Portal</h3>
+                <p>
+                    View your attendance percentage, daily records,
+                    subject-wise statistics, and monthly reports.
+                </p>
+                <a href="student-login.html">Sign in as Student →</a>
+            </article>
+
+            <article class="portal-card">
+                <div class="portal-icon">🛡️</div>
+                <h3>Admin Portal</h3>
+                <p>
+                    Manage student records, maintain subjects, mark daily
+                    attendance, and generate reports.
+                </p>
+                <a href="login.html">Sign in as Admin →</a>
+            </article>
+        </section>
+
+        <h2 class="section-title">Everything you need</h2>
+
+        <section class="features">
+            <article class="feature">
+                <div class="portal-icon">📋</div>
+                <h3>Daily Attendance</h3>
+                <p>Record and review Present, Absent, and Late statuses.</p>
+            </article>
+            <article class="feature">
+                <div class="portal-icon">📊</div>
+                <h3>Attendance Reports</h3>
+                <p>Review attendance percentages and monthly summaries.</p>
+            </article>
+            <article class="feature">
+                <div class="portal-icon">🔒</div>
+                <h3>Separate Portals</h3>
+                <p>Give administrators and students their respective views.</p>
+            </article>
+        </section>
+    </main>
+
+    <footer>
+        AttendEase · Student Attendance Management System
+    </footer>
+</div>
+</body>
+</html>

@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Attendance Reports</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="container">
+    <h1>Attendance Reports</h1>
+    <p id="message" role="status"></p>
+
+    <label for="subjectId">Subject</label>
+    <select id="subjectId"></select>
+
+    <label for="mode">Report Type</label>
+    <select id="mode">
+        <option value="date">Date-wise</option>
+        <option value="month">Monthly</option>
+    </select>
+
+    <label for="period">Date or month</label>
+    <input id="period" type="date" required>
+
+    <button id="generateButton" type="button">Generate Report</button>
+
+    <table>
+        <thead>
+        <tr>
+            <th>Roll No.</th><th>Name</th><th>Present</th>
+            <th>Absent</th><th>Late</th><th>Total</th><th>Attendance %</th>
+        </tr>
+        </thead>
+        <tbody id="reportRows"></tbody>
+    </table>
+    <div class="page-navigation">
+       <a href="dashboard.html" class="back-button">
+           ← Back to Admin Dashboard
+       </a>
+    </div>
+    
+</div>
+<script src="js/reports.js"></script>
+</body>
+</html>
